@@ -15,31 +15,31 @@
 
     - name: remove default html
       ansible.builtin.file: 
-      path: /usr/share/nginx/html
-      state: absent
+        path: /usr/share/nginx/html
+        state: absent
 
     - name: create html directory
       ansible.builtin.file:
-      path: /usr/share/nginx/html
-      state: directory
+        path: /usr/share/nginx/html
+        state: directory
 
     - name: download the folder
       ansible.builtin.get_url:
-      url: https://roboshop-builds.s3.amazonaws.com/web.zip
-      dest: /tmp
+        url: https://roboshop-builds.s3.amazonaws.com/web.zip
+        dest: /tmp
 
     - name: extract catalogue artifact
-      ansible.builtin.unarchive:
-      src: /tmp/web.zip
-      dest: /usr/share/nginx/html
-      remote_src: yes
+        ansible.builtin.unarchive:
+        src: /tmp/web.zip
+        dest: /usr/share/nginx/html
+        remote_src: yes
 
     - name: copy roboshop.conf
       ansible.builtin.copy:
-      src: roboshop.conf
-      dest: /etc/nginx/default.d/roboshop.conf
+        src: roboshop.conf
+        dest: /etc/nginx/default.d/roboshop.conf
     
     - name: restart nginx
       ansible.builtin.service:
-      name: nginx
-      state: restarted
+        name: nginx
+        state: restarted
