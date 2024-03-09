@@ -4,12 +4,12 @@
   tasks:
   - name: Setup NodeJS repos. 
     ansilble.builtin.shell: "curl -sL https://rpm.nodesource.com/setup_lts.x | bash"
-  - name: Install nodejs
-    ansible.builtin.yum:
-      name: nodejs
-      state: installed
-  - name: Check roboshop user exists or not
-    ansible.builtin.command: id roboshop
-    register: out
-    ignore_errors: true
+  # - name: Install nodejs
+  #   ansible.builtin.yum:
+  #     name: nodejs
+  #     state: installed
+  # - name: Check roboshop user exists or not
+  #   ansible.builtin.command: id roboshop
+  #   register: out
+  #   ignore_errors: true
       
