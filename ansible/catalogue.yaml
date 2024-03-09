@@ -24,5 +24,3 @@
       path: /app
       register: directory
 
-  - name: print the directory stats
-    
