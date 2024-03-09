@@ -8,10 +8,19 @@
 
 USERID=$(id -u)
 
+DATE=$(date +%F)
+FILE_NAME=$0
+LOG_FILE=/tmp/$FILE_NAME-$DATE.log
+
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+
 if [ $USERID -ne 0 ]
 then
-    echo "Logged in user is not root user"
+    echo "$G Logged in user is not root user $N"
     exit 1
 else
-    echo "Logged in user is root user"
+    echo "$R Logged in user is root user"
 fi
+
