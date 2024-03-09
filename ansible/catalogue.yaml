@@ -13,3 +13,16 @@
     register: out
     ignore_errors: true
       
+  - when: out.rc !=0
+    name: create roboshop user
+    become: yes
+    ansible.builtin.user: 
+      name: roboshop
+  
+  - name: check app directory exists or not
+    ansible.builtin.stat:
+      path: /app
+      register: directory
+
+  - name: print the directory stats
+    
