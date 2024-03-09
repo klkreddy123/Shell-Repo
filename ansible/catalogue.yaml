@@ -59,16 +59,6 @@
     ansible.builtin.systemd:
       daemon_reload: true
   
-  - name: enable the service
-    ansible.builtin.service:
-      name: catalogue
-      state: restarted
-  
-  - name: start the service
-    ansible.builtin.service:
-      name: catalogue
-      status: enabled
-  
   - name: copy mongo repo
     ansible.builtin.copy:
       src: mongo.repo
