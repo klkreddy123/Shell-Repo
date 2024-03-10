@@ -1,0 +1,17 @@
+[mongodb]
+mongodb.kautomation.online
+
+[catalogue]
+catalogue.kautomation.online
+
+[web]
+web.kautomation.online
+
+[redis]
+redis.kautomation.online
+
+[cart]
+cart.kautomation.online
+
+[user]
+user.kautomation.online

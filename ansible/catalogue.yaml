@@ -53,7 +53,7 @@
   - name: setup systemd service
     ansible.builtin.copy:
       src: catalogue.service
-      dest: /etc/systemd/system
+      dest: /etc/systemd/system/catalogue.service
   
   - name: Load the service
     ansible.builtin.systemd:
