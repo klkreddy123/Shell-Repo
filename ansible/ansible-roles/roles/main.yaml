@@ -1,5 +1,5 @@
 - name: installing roboshop project
-  hosts: "{{componenet}}"
+  hosts: "{{component}}"
   become: yes
   roles:
   - "{{component}}"
