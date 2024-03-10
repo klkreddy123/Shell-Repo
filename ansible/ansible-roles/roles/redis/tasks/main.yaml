@@ -1,7 +1,3 @@
-- name: Redis is offering the repo file as a rpm Lets install it
-  hosts: redis
-  become: yes
-  tasks:
     - name: install redis
       ansible.builtin.yum: 
         name: https://rpms.remirepo.net/enterprise/remi-release-8.rpm
