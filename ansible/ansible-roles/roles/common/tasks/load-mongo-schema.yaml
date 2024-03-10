@@ -9,4 +9,4 @@
     state: installed
   
 - name: load {{component}}.schema
-    ansible.builtin.command: mongo --host mongodb.kautomation.online < /app/schema/{{component}}.js
+  ansible.builtin.command: mongo --host mongodb.kautomation.online < /app/schema/{{component}}.js
