@@ -1,2 +1,5 @@
 - name: Hello to centos
-  ansible.builtin.shell: echo "hello from centos" > /tmp/hello.txt
+  hosts: centos
+  tasks:
+  - name: print message
+    ansible.builtin.shell: echo "hello from centos" > /tmp/hello.txt
