@@ -10,8 +10,8 @@
 
 - name: download dependencies
   ansible.builtin.command: npm install
-    args:
-      chdir: /app
+  args:
+    chdir: /app
 
 - name: load schema
   ansible.builtin.import_role:
