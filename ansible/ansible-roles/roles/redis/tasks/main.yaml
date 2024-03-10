@@ -1,4 +1,4 @@
-- name: Redis is offering the repo file as a rpm. Lets install it
+- name: Redis is offering the repo file as a rpm Lets install it
   hosts: redis
   become: yes
   tasks:
